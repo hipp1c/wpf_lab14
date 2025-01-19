@@ -1,0 +1,120 @@
+﻿<Window x:Class="wpf_lab14.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_lab14"
+        mc:Ignorable="d"
+        Title="Агентсво борзых"
+        FontSize="14"
+        WindowState="Maximized">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Viewbox Grid.Row="0" Margin="5">
+                <TextBlock
+                    FontSize="20"
+                    FontFamily="impact"
+                    Foreground="DarkGray">
+                    Мои любимые борзые
+                </TextBlock>
+            </Viewbox>
+            
+
+            <ScrollViewer Grid.Row="1">
+                <StackPanel Margin="5">
+                    <Image Source="src/snowdog.jpg" MaxHeight="150px"></Image>
+                    <TextBlock
+                        HorizontalAlignment="Center">
+                        Снеговик
+                    </TextBlock>
+
+                    <Image Source="src/sunflower_dog.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment="Center">Подсолнух</TextBlock>
+
+                    <Image Source="src/circus_dog.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment="Center">Клоун</TextBlock>
+
+                    <Image Source="src/glasses_dog.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment="Center">Очки</TextBlock>
+
+                    <Image Source="src/scarf_dog.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment="Center">Шарф</TextBlock>
+
+                    <Image Source="src/crown_dog.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment="Center">Корона</TextBlock>
+
+                    <Image Source="src/apple_dog.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment="Center">Яблоко</TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+        <TabControl Grid.Column="1" Margin="5">
+            <TabItem Header="Инструменты">
+                <StackPanel>
+                    <Menu>
+                        <MenuItem Header="Файл">
+                            <MenuItem Header="Новый"></MenuItem>
+                            <MenuItem Header="Открыть"></MenuItem>
+                        </MenuItem>
+                        <MenuItem Header="Редактировать">
+                            <MenuItem Header="Обрезать">
+                                <MenuItem Header="Обрезать квадрат"></MenuItem>
+                                <MenuItem Header="Произвольная обрезка"></MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="Изменить цвет"></MenuItem>
+                        </MenuItem>
+                    </Menu>
+                    
+                    <TextBlock
+                        Margin="3"
+                        FontFamily="impact"
+                        FontSize="20">
+                        Услуги
+                    </TextBlock>
+
+                    <ListBox BorderBrush="White">
+                        <ListBoxItem Margin="3">Фотография</ListBoxItem>
+                        <ListBoxItem Margin="3">Ретуширование</ListBoxItem>
+                        <ListBoxItem Margin="3">Исправление недостатков</ListBoxItem>
+                        <ListBoxItem Margin="3">Изменение фона</ListBoxItem>
+
+                        <ListBox.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Редактировать"></MenuItem>
+                                <MenuItem Header="Удалить"></MenuItem>
+                                <MenuItem Header="Создать на основе"></MenuItem>
+                            </ContextMenu>
+                        </ListBox.ContextMenu>
+                    </ListBox>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Расписание">
+
+            </TabItem>
+        </TabControl>
+
+        <Viewbox Grid.Column="2" Margin="5" VerticalAlignment="Top">
+            <Calendar>
+                <Calendar.BlackoutDates>
+                    <CalendarDateRange End="1.20.2025"></CalendarDateRange>
+                </Calendar.BlackoutDates>
+            </Calendar>
+        </Viewbox>
+        
+        
+
+    </Grid>
+</Window>

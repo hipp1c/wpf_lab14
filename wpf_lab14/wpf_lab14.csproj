@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="src\apple_dog.jpg" />
+    <None Remove="src\circus_dog.jpg" />
+    <None Remove="src\crown_dog.jpg" />
+    <None Remove="src\glasses_dog.jpg" />
+    <None Remove="src\scarf_dog.jpg" />
+    <None Remove="src\snowdog.jpg" />
+    <None Remove="src\sunflower_dog.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="src\apple_dog.jpg" />
+    <Resource Include="src\circus_dog.jpg" />
+    <Resource Include="src\crown_dog.jpg" />
+    <Resource Include="src\glasses_dog.jpg" />
+    <Resource Include="src\scarf_dog.jpg" />
+    <Resource Include="src\snowdog.jpg" />
+    <Resource Include="src\sunflower_dog.jpg" />
+  </ItemGroup>
+
+</Project>
